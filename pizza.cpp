@@ -10,29 +10,29 @@ using namespace std;
 
 int main() {
     const double PIZZA = 15.50,
-                 SODA = 2.00,
-                 CHICKEN_NUGGETS = 7.00,
-                 BREADSTICKS = 9.75;
+                 REFRIGERANTE = 2.00,
+                 FRANGO_FRITO = 7.00, //CHICKEN_NUGGETS
+                 PALITO_DE_QUEIJO = 9.75; //BREADSTICKS
     double numItens = 0,
            menuItem,
            total = 0;
     char itemLetter;
     
-    cout << "=========================================\n"
-         <<"\t\tWalcon to Pizza palace\n"
-         << "===========================================" << endl;
+    cout << "======================================================\n"
+         <<"\t\tBem Vindo a Divina Pizza!\n"
+         << "*******************************************************" << endl;
     cout << fixed << setprecision(2) << right;  
     
     do{
         cout <<"===================================================\n\n"
              << "\tA\tPizza" << setw(26) << PIZZA
-             << "\n\tB\tB\tSoda" <<setw(27) << SODA
-             << "\n\tC\tChicken Nuggets" << setw(20) << CHICKEN_NUGGETS
-             << "\n\tD\tBreadstickes" << setw(20) << BREADSTICKS
+             << "\n\tB\tSoda" <<setw(27) << REFRIGERANTE
+             << "\n\tC\tChicken Nuggets" << setw(20) << FRANGO_FRITO
+             << "\n\tD\tBreadstickes" << setw(20) << PALITO_DE_QUEIJO
              << "\n\tE\tExit" << endl;
 
 
-        cout << "\nPlease enter the next menu item Letter: ";
+        cout << "\nPor favor, insira o próximo item do menu: ";
         cin >> itemLetter;
         
         
@@ -41,18 +41,18 @@ int main() {
             menuItem = PIZZA;
             break;
             case 'B':
-            menuItem = SODA;
+            menuItem = REFRIGERANTE;
             break;
             case 'C':
-            menuItem = CHICKEN_NUGGETS;
+            menuItem = FRANGO_FRITO;
             break;
             case 'D':
-            menuItem = BREADSTICKS;
+            menuItem = PALITO_DE_QUEIJO;
             break;
             case 'E':
             break;
             default:
-                cerr << "\nPlease pick a valid option\n";
+                cerr << "\nPor favor, escolha uma opção válida\n";
         }
     if(itemLetter == 'A' || itemLetter == 'B' || itemLetter == 'C' || itemLetter == 'D')
        numItens++;
