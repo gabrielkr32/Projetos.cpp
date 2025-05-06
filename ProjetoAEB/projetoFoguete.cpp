@@ -54,5 +54,20 @@ int main() {
     cin >> angulo;
 
     //conversão para radianos
+    double anguloRad = angulo * M_PI / 180;
+
+    //calculos
+    alturaMax = pow(v0 * sin(angulo), 2) / (2 * g);
+    alcance = pow(v0, 2) * sin(2 * anguloRad) / g;
+    tempoVoo = (2 * v0 * sin (anguloRad)) / g;
+
+    //resultado
+
+    cout << "\nResultados da simulação\n";
+    cout << "Altura maxima: " << alturaMax << "metros\n";
+    cout << "alcance total: " << alcance << "metros\n";
+    cout << "tempo de voo: "  << tempoVoo << "segundos\n";
+
+    return 0 ;
 
 }
